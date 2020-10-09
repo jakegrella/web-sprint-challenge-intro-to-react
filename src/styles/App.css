@@ -1,8 +1,31 @@
-.App {
-  text-align: center;
-}
-.Header {
-  color: #443e3e;
-  text-shadow: 1px 1px 5px #fff;
-}
 /* write your parent styles in here for your App.js */
+h2,
+h3,
+h4 {
+	font-weight: 700;
+	color: #212121;
+}
+h1 {
+	font-size: 3rem;
+	color: #fff;
+	margin-bottom: 3%;
+}
+h2 {
+	font-size: 2.4rem;
+}
+h3 {
+	font-size: 2rem;
+}
+h4 {
+	font-size: 1.8rem;
+}
+
+.App {
+	text-align: center;
+}
+
+.container {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-around;
+}
