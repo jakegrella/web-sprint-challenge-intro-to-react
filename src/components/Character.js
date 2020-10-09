@@ -5,10 +5,9 @@ import Details from './Details';
 export default function Character(props) {
 	return (
 		<div className='character'>
-			{props.char.id}
-			{props.char.name}
+			<img src={props.char.image} alt={props.char.name} />
+			<h2>{props.char.name}</h2>
 			<Details char={props.char} />
-			{/* <button onClick={() => openDetails(props.info.id)}>See Details</button> */}
 		</div>
 	);
 }

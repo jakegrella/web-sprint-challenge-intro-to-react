@@ -9,12 +9,12 @@ export default function App() {
 	const [characters, setCharacters] = useState([]);
 	const [currentCharacterId, setCurrentCharacterId] = useState(null);
 
-	// const openDetails = (id) => {
-	// 	setCurrentCharacterId(id);
-	// };
-	// const closeDetails = () => {
-	// 	setCurrentCharacterId(null);
-	// };
+	const openDetails = (id) => {
+		setCurrentCharacterId(id);
+	};
+	const closeDetails = () => {
+		setCurrentCharacterId(null);
+	};
 
 	// Fetch characters from the API in an effect hook. Remember, anytime you have a
 	// side effect in a component, you want to think about which state and/or props it should
@@ -24,7 +24,7 @@ export default function App() {
 			axios
 				.get(`https://rickandmortyapi.com/api/character`)
 				.then((response) => {
-					console.log('response.data.results', response.data.results);
+					// console.log('response.data.results', response.data.results);
 					setCharacters(response.data.results);
 				})
 				.catch((error) => {
@@ -34,7 +34,7 @@ export default function App() {
 		fetchCharacters();
 	}, []);
 
-	console.log('chars1', characters);
+	// console.log('chars1', characters);
 	return (
 		<div className='App'>
 			<h1 className='Header'>Characters</h1>
